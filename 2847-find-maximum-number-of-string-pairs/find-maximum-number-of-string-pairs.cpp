@@ -4,9 +4,9 @@ public:
         
         vector<string> result;
         for(int i =0 ; i<words.size(); i++){
-            string rev = words[i];
-            reverse(rev.begin(), rev.end());
-            result.push_back(rev);
+            string temp = words[i]; 
+            reverse(temp.begin(), temp.end());
+            result.push_back(temp);
         }
 
         int count = 0;
