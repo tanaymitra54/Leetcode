@@ -1,26 +1,25 @@
 class Solution {
-private:
-    void solve(vector<vector<int>> &result, vector<int> &ans, int index, vector<int> &nums ){
-        //base case
+public:
+    void getAllSubsets(vector<int> &nums, int index,vector<vector<int>> &ans,vector<int> &combi){
         if(index >= nums.size()){
-            result.push_back(ans);
+            ans.push_back(combi);
             return;
         }
-        //exclude case
-        solve(result, ans, index+1, nums);
 
-        //include case
-        int element = nums[index];
-        ans.push_back(element);
-        solve(result,ans,index+1,nums);
-        ans.pop_back(); // backtrack
+        //take case
+        combi.push_back(nums[index]);
+        getAllSubsets(nums,index+1,ans,combi);
+
+        //not take
+        combi.pop_back();
+        getAllSubsets(nums,index+1,ans,combi);
     }
-public:
+
+
     vector<vector<int>> subsets(vector<int>& nums) {
-        vector<vector<int>> result;
-        vector<int> ans;
-        int index = 0;
-        solve(result,ans,index,nums);
-        return result;
+        vector<vector<int>> ans;
+        vector<int> combi;
+        getAllSubsets(nums, 0 , ans,combi);
+        return ans;
     }
 };
