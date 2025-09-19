@@ -4,7 +4,6 @@ public:
     MinStack() {
         
     }
-    
     void push(int val) {
         
         if(minSt.empty() || minSt.top() >= val){
@@ -15,7 +14,7 @@ public:
     
     void pop() {
         
-        if(st.top() == minSt.top()){
+        if(st.top() == minSt.top()){//if the element being popped is the current minimum then we pop it from the minst too to upadate the minimum
             minSt.pop();
         }
         st.pop();
