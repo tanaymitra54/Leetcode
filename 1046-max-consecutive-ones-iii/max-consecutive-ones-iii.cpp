@@ -8,8 +8,8 @@ public:
         
 
 
-        for(int i = 0 ; i<n ; i++){
-            if(nums[i] == 0){//if zero encountered then increment the nu of zeroe
+        for(int r = 0 ; r<n ; r++){
+            if(nums[r] == 0){//if zero encountered then increment the no, of zeroe
                 num_zeroes++;
             } 
             while(num_zeroes > k){//run  till its invalid  come out of it once it gets valid
@@ -18,7 +18,7 @@ public:
                 }
                 l++;
             }
-            int w = i-l+1;
+            int w = r-l+1;
             max_w = max(max_w,w);
         }
         return max_w;
