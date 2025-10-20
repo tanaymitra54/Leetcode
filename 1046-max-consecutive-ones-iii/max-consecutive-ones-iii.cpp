@@ -9,7 +9,7 @@ public:
 
 
         for(int i = 0 ; i<n ; i++){
-            if(nums[i] == 0){//if zero encountered then increment the num of zeroe
+            if(nums[i] == 0){//if zero encountered then increment the nu of zeroe
                 num_zeroes++;
             } 
             while(num_zeroes > k){//run  till its invalid  come out of it once it gets valid
