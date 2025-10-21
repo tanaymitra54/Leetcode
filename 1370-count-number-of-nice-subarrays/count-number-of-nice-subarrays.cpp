@@ -7,12 +7,14 @@ public:
         int result  =0;
 
         for(int r =0; r<n; r++){
+            //cont the number of odd numbers 
             if(nums[r]%2 != 0){
                 count++;
             }
-            //invalid case
+
+            //invalid case when count of the odd numbers exceeds k
             while(count>k){
-                if(nums[l]%2 != 0) count--;
+                if(nums[l]%2 != 0) count--;//reduce the count valeu and then increment the left pointer 
                 l++;
             }
             //count gets equal to k
