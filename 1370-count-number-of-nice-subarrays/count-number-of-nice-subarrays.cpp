@@ -17,6 +17,7 @@ public:
                 if(nums[l]%2 != 0) count--;//reduce the count valeu and then increment the left pointer 
                 l++;
             }
+            //DANGER AREA
             //count gets equal to k
             if(count == k){
                 int temp =l;
