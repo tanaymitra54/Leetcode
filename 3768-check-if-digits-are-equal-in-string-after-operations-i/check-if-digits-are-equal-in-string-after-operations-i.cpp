@@ -9,9 +9,9 @@ public:
         //number of iterations is equal to the string length equal to 2 
         //once the string length is equal to 2 we check whether the elemnts are same or not 
         
-        while(s.length() >2){
+        while(s.length() > 2){
             string temp = "";
-            for (int i = 0; i < (int)s.length() - 1; i++) {
+            for(int i =0 ; i<s.length() - 1; i++){
                 int sum = ((s[i] - '0') + (s[i + 1] - '0')) % 10;
                 temp += to_string(sum);
             }
