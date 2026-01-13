@@ -32,7 +32,12 @@ public:
                 ans += (d + '0');
         }
 
-        return ans.empty() ? "0" : ans;
+        if(ans.size() == 0){
+            return "0";
+        }
+        else{
+            return ans;
+        }
         
     }
 };
