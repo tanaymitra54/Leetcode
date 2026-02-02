@@ -20,7 +20,7 @@ public:
             int count = upper_bound(prefix_sum.begin(),
                                     prefix_sum.end(),
                                     query)
-                        - prefix_sum.begin();   // ✅ added
+                        - prefix_sum.begin();   
 
             ans.push_back(count);
         }
