@@ -17,18 +17,21 @@ public:
         for(int j = 0 ; j<m; j++){
             int query = queries[j];
 
-            int l = 0, r = n - 1;
-int count = 0;
+            int l =0;
+            int r = n-1;
+            int  count =0;
+            while (l<=r) {
+                int mid = l +(r-l)/2;
+                if(prefix_sum[mid] <= query){
+                    count = mid +1;
+                    l = mid +1;
 
-while (l <= r) {
-    int mid = l + (r - l) / 2;
-    if (prefix_sum[mid] <= query) {
-        count = mid + 1;
-        l = mid + 1;
-    } else {
-        r = mid - 1;
-    }
-}
+                }
+                else{
+                    r = mid - 1;
+                }
+            }
+
             ans.push_back(count);
         }
         return ans;
