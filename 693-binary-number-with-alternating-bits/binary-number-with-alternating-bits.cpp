@@ -3,7 +3,7 @@ public:
     string toBinary(int n){
         string binary = "";
         while(n>0){
-            binary =char( '0' + n%2) +  binary;
+            binary = to_string(n%2) +  binary;
             n = n/2;
         }
         return binary;
