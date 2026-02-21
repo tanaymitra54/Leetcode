@@ -16,8 +16,8 @@ public:
             }
         }
         if(count < 2) return false;
-        for(int i = 2 ; i*i <= count; i++){
-            if(count % i == 0){
+        for(int i = 2 ; i*i <= count; i++){//start from i  = 2
+            if(count % i == 0){ //the oreder should be well maintained 
                 return false;
             }
         }
