@@ -10,6 +10,6 @@ public:
                 mini = min(mini, circular);
             }
         }
-       return (mini == INT_MAX) ? -1 : mini;
+        return (mini == INT_MAX)? -1 : mini;
     }
 };
