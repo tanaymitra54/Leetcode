@@ -11,21 +11,26 @@
 class Solution {
 public:
     ListNode* removeNthFromEnd(ListNode* head, int n) {
-        ListNode* temp = new ListNode(0,head);
-        ListNode* left = temp;
-        ListNode* right = head;
+        ListNode* dummy = new ListNode(0,head); //creates a dummy node at the beginning of the head node
+        ListNode* slow = dummy; //left node points to the dummy 
+        ListNode* fast = head; //right points to the heda initially 
 
-        while(n>0 && right != nullptr){
-            right = right->next;
-            n-= 1;
+        //position the head porperly now 
+        while(n>0 && fast != nullptr){
+            fast = fast->next;
+            n-=1;
         }
 
-        while(right != nullptr){
-            left =  left->next;
-            right = right->next;
+        //keep moving until fast reches null
+        while(fast != nullptr){
+            slow = slow->next;
+            fast = fast->next;
         }
 
-        left->next = left->next->next;
-        return temp->next;
+        //delete the node as now the slow would point to the correct node 
+        slow->next = slow->next->next;
+        return dummy->next;
+
+
     }
 };
