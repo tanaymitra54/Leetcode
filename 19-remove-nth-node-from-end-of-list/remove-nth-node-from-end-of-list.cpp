@@ -16,9 +16,8 @@ public:
         ListNode* fast = head; //right points to the heda initially 
 
         //position the head porperly now 
-        while(n>0 && fast != nullptr){
+        for(int i =0 ; i<n; i++){
             fast = fast->next;
-            n-=1;
         }
 
         //keep moving until fast reches null
