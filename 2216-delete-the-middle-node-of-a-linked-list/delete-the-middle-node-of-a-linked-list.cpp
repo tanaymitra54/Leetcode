@@ -20,7 +20,7 @@ public:
         return slow;
     }
     ListNode* deleteMiddle(ListNode* head) {
-        if(!head || !head->next) return nullptr;
+        if(head == nullptr || head->next == nullptr) return nullptr;
         ListNode* middle = findMiddle(head);
         ListNode* temp = head;
         while(temp->next != middle){
