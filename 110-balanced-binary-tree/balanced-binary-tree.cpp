@@ -29,6 +29,9 @@ public:
         if(abs(lh - rh) > 1){
             return false;
         }
+
+        //abive this portion we are onlychekcing whether the root is balanced we also need to check the entire left subtree and th eright subtree
+        
         return isBalanced(root->left) && isBalanced(root->right);
     
     }
