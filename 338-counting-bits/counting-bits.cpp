@@ -1,16 +1,16 @@
 class Solution {
 public:
     int binary(int num){
-        return num;  // no conversion needed, work directly on bits
+        return num;  
     }
     int bits_one(int num){
         int count = 0;
         while(num>0){
-            int digit = num%2;      // changed %10 -> %2
+            int digit = num%2;      
             if(digit == 1){
                 count++;
             }
-            num = num/2;             // changed /10 -> /2
+            num = num/2;             
         }
         return count;
     }
